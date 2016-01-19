@@ -1,0 +1,38 @@
+{
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "wordpress",
+                "type": "webroot",
+                "version": "4.4.1",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/WordPress/WordPress/archive/4.4.1.zip"
+                },
+                "require" : {
+                    "fancyguy/webroot-installer": "1.0.0"
+                }
+            }
+        },
+        {
+            "type":"composer",
+            "url":"http://wpackagist.org"
+        }
+    ],
+    "require": {
+        "wordpress": "4.*",
+        "fancyguy/webroot-installer": "1.0.0",
+        "wpackagist-plugin/cmb2": "2.1.2",
+        "wpackagist-plugin/ultimate-social-media-icons": "1.1.1.11"
+    },
+    "extra": {
+        "webroot-dir": "wordpress",
+        "webroot-package": "wordpress",
+        "installer-paths": {
+            "wordpress/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin", "wpackagist-plugin/cmb2"],
+            "wordpress/wp-content/plugins/{$name}/": ["type:wordpress-plugin", "wpackagist-plugin/ultimate-social-media-icons"],
+            "wordpress/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+        }
+    }
+}
