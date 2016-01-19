@@ -1,0 +1,11 @@
+{
+  "db": {
+    "driver": "mysql",
+    "host": "localhost",
+    "username": "root",
+    "password": "",
+    "dbname": "testdb"
+  },
+  "datadir": "dev",
+  "vcs": "git"
+}
